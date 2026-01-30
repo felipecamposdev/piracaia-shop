@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVIÇO #1 | PIRACAIA.SHOP</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L41.3 14V34L24 44L6.7 34V14L24 4Z' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Crect x='17' y='17' width='14' height='14' rx='2' fill='%23f97316'/%3E%3C/svg%3E">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --cyan: #0891b2; 
+            --orange: #f97316; 
+            --light-bg: #fdfdfd; 
+            --glass-white: rgba(255, 255, 255, 0.9);
+        }
+        body { 
+            font-family: 'JetBrains Mono', monospace; 
+            background-color: var(--light-bg); 
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .font-tech { font-family: 'Michroma', sans-serif; text-transform: uppercase; }
+        
+        .dropdown { padding-bottom: 20px; margin-bottom: -20px; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--glass-white);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--orange);
+            min-width: 220px;
+            z-index: 50;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+            margin-top: -10px;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .cyber-card-light {
+            background: white;
+            border-left: 4px solid var(--orange);
+            clip-path: polygon(0 0, 97% 0, 100% 10%, 100% 100%, 3% 100%, 0 90%);
+            box-shadow: 0 15px 40px rgba(249, 115, 22, 0.05);
+        }
+
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+        .accordion-item.active .accordion-content { max-height: 500px; transition: max-height 0.6s ease-in; }
+        .accordion-item.active .btn-round { background-color: var(--orange); color: white; transform: rotate(180deg); }
+        .accordion-item.active { border-color: var(--orange); background-color: #fffaf8; }
+        
+        .btn-round {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            color: var(--orange);
+            flex-shrink: 0;
+        }
+
+        .carousel-item { display: none; }
+        .carousel-item.active { display: block; animation: fade 0.5s ease-in-out; }
+        
+        .img-fade { animation: imgFade 0.6s ease-in-out; }
+        @keyframes imgFade { from { opacity: 0.4; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b-2 border-orange-500/20">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-8 h-8 mr-3 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    <path d="M24 4L41.3205 14V34L24 44L6.67949 34V14L24 4Z" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="17" y="17" width="14" height="14" rx="2" fill="#f97316" filter="url(#glow)"/>
+                </svg>
+                <div class="flex flex-col leading-none">
+                    <span class="text-sm md:text-base font-tech tracking-tighter text-slate-900">[ PIRACAIA.SHOP ]</span>
+                    <span class="text-[7px] font-tech text-orange-500 tracking-[0.2em]">IDENTIDADE DIGITAL EM PIRACAIA E REGIÃO</span>
+                </div>
+            </div>
+
+            <div class="flex gap-8 items-center">
+                <a href="index.html" class="text-[10px] font-tech hover:text-orange-600 transition-colors">HOME</a>
+                <div class="dropdown relative">
+                    <button class="text-[10px] font-tech flex items-center gap-1 text-orange-600 uppercase">SERVIÇOS ▼</button>
+                    <div class="dropdown-content p-2">
+                        <a href="google_bucas.html" class="block px-4 py-3 text-[10px] hover:bg-orange-50 border-b border-slate-100 transition-all font-bold">#1 GOOGLE BUSCAS</a>
+                        <a href="google_bucas.html" class="block px-4 py-3 text-[10px] hover:bg-orange-50 border-b border-slate-100 transition-all font-bold">#2 IDENTIDADE DIGITAL</a>
+                        <a href="google_bucas.html" class="block px-4 py-3 text-[10px] hover:bg-orange-50 transition-all font-bold">#3 IDENTIDADE TEMPORÁRIA</a>
+                        <a href="google_bucas.html" class="block px-4 py-3 text-[10px] hover:bg-orange-50 transition-all font-bold">#4 WEB3 SOLUTIONS</a>
+                    </div>
+                </div>
+                <a href="#form-diagnostico" class="hidden md:block text-[10px] font-tech bg-orange-600 text-white px-5 py-2 hover:bg-slate-900 transition-all shadow-lg shadow-orange-200 uppercase">CONTATO</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <div class="mb-12 border-l-8 border-orange-500 pl-6">
+            <span class="text-orange-600 text-xs font-bold tracking-[0.2em] uppercase">#1 GOOGLE BUSCAS</span>
+            <h1 class="text-3xl md:text-5xl mt-2 text-slate-800">PRESENÇA E IDENTIDADE DIGITAL NA WEB</h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
+            <div class="space-y-6">
+                <h3 class="text-xs font-tech mb-6 text-orange-600 italic">// COMO FUNCIONA ?</h3>
+                
+                <div class="accordion-item border border-slate-200 bg-white transition-all duration-300 rounded-xl overflow-hidden" data-img="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80">
+                    <button onclick="toggleAccordion(this)" class="w-full p-4 flex justify-between items-center text-left">
+                        <span class="text-[12px] font-tech ml-2">01 IDENTIDADE DIGITAL </span>
+                        <div class="btn-round shadow-lg">▼</div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="p-6 text-xs leading-relaxed text-slate-500 bg-white border-t border-slate-50">Tenha sua IDENTIDADE digital com todas as informações sobre o seu negócio, uma página web [www.SEUNOME.piracaia.shop] que funciona como um cartão de visitas digital (One Pages e Landing Pages), que possibilita sua empresa e seu negócio ser encontrado e acessado pelas pessoas através de buscas na web nossa região,</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item border border-slate-200 bg-white transition-all duration-300 rounded-xl overf    low-hidden" data-img="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80">
+                    <button onclick="toggleAccordion(this)" class="w-full p-4 flex justify-between items-center text-left">
+                        <span class="text-[12px] font-tech ml-2">02. TUDO EM UM ÚNICO LUGAR</span>
+                        <div class="btn-round shadow-lg">▼</div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="p-6 text-xs leading-relaxed text-slate-500 bg-white border-t border-slate-50">Exposição de todos seus contatos e todas as suas redes sociais em um único lugar. WhatsApp com envio de mensagens pela SUA página Web, Instagram, Facebook, YouTube, Links para Pedidos, Telefone, Endereço com utilização do Google Maps...</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item border border-slate-200 bg-white transition-all duration-300 rounded-xl overflow-hidden" data-img="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80">
+                    <button onclick="toggleAccordion(this)" class="w-full p-4 flex justify-between items-center text-left">
+                        <span class="text-[12px] font-tech ml-2">03. SEGURANÇA DE DADOS</span>
+                        <div class="btn-round shadow-lg">▼</div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="p-6 text-xs leading-relaxed text-slate-500 bg-white border-t border-slate-50">Proteção SSL de 256 bits e infraestrutura preparada para tráfego intenso e segurança Web3.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sticky top-28 hidden md:block">
+                <div class="cyber-card-light overflow-hidden bg-slate-100 aspect-square flex items-center justify-center">
+                    <img id="accordion-display-img" src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80" 
+                         class="w-full h-full object-cover transition-all duration-500" alt="Display">
+                </div>
+            </div>
+        </div>
+
+        <div class="relative w-full overflow-hidden cyber-card-light mb-16" id="carousel">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" class="w-full h-[300px] md:h-[450px] object-cover" alt="Slide 1">
+                <div class="absolute bottom-0 bg-orange-600 p-4 text-white w-full text-[10px] font-tech uppercase">01 // DOMINE OS RESULTADOS DE BUSCA</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=1000&q=80" class="w-full h-[300px] md:h-[450px] object-cover" alt="Slide 2">
+                <div class="absolute bottom-0 bg-slate-900 p-4 text-white w-full text-[10px] font-tech uppercase">02 // ESTATÍSTICAS EM TEMPO REAL</div>
+            </div>
+            <button onclick="moveSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 p-4 shadow-xl rounded-full text-slate-900 z-10 hover:bg-orange-600 hover:text-white transition-all">◀</button>
+            <button onclick="moveSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 p-4 shadow-xl rounded-full text-slate-900 z-10 hover:bg-orange-600 hover:text-white transition-all">▶</button>
+        </div>
+
+        <section id="form-diagnostico" class="max-w-3xl mx-auto py-12 px-8 bg-slate-900 text-white rounded-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-orange-600/10 rounded-full -mr-16 -mt-16"></div>
+            <div class="relative z-10 text-center mb-10">
+                <h2 class="text-xl md:text-2xl font-tech mb-2">Solicitar Diagnóstico</h2>
+                <p class="text-[10px] text-orange-400 font-tech uppercase tracking-widest italic">Análise técnica para Piracaia e Região</p>
+            </div>
+            
+            <form class="space-y-6 max-w-lg mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[9px] font-tech mb-2 text-slate-400">NOME_EMPRESA</label>
+                        <input type="text" placeholder="Sua Empresa" class="w-full bg-slate-800 border border-slate-700 p-4 text-xs text-white focus:outline-none focus:border-orange-500 transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-tech mb-2 text-slate-400">WHATSAPP_CONTATO</label>
+                        <input type="text" placeholder="(11) 9...." class="w-full bg-slate-800 border border-slate-700 p-4 text-xs text-white focus:outline-none focus:border-orange-500 transition-all">
+                    </div>
+                </div>
+                <button type="button" class="w-full bg-orange-600 text-white font-tech text-[11px] py-5 hover:bg-white hover:text-orange-600 transition-all font-bold tracking-widest uppercase">
+                    ENVIAR_SOLICITAÇÃO_SISTEMA
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="p-10 border-t border-slate-100 text-center">
+        <div class="text-[9px] font-tech text-slate-400 tracking-[0.4em] mb-4 uppercase">[PIRACAIA.SHOP] // WEB3_INTERFACE</div>
+        <div class="w-12 h-1 bg-orange-500 mx-auto"></div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        function moveSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function toggleAccordion(element) {
+            const item = element.parentElement;
+            const displayImg = document.getElementById('accordion-display-img');
+            const newImgSrc = item.getAttribute('data-img');
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+            
+            if (!isActive) {
+                item.classList.add('active');
+                displayImg.classList.remove('img-fade');
+                void displayImg.offsetWidth; 
+                displayImg.src = newImgSrc;
+                displayImg.classList.add('img-fade');
+            }
+        }
+        setInterval(() => moveSlide(1), 10000);
+    </script>
+</body>
+</html>
