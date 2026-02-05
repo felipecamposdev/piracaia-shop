@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PIRACAIA.SHOP | PASSO A PASSO</title>
+    <meta name="description" content="Saiba como garantir sua presença digital em Piracaia. Siga nosso passo a passo simples para ter sua OnePage profissional.">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L41.3 14V34L24 44L6.7 34V14L24 4Z' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Crect x='17' y='17' width='14' height='14' rx='2' fill='%23f97316'/%3E%3C/svg%3E">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --cyan: #22d3ee; --orange: #f97316; --dark: #020617; }
+        body { 
+            font-family: 'JetBrains Mono', monospace; 
+            background-color: var(--dark); 
+            color: #e6edf3; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-tech { font-family: 'Michroma', sans-serif; text-transform: uppercase; }
+        
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        
+        .cyber-card {
+            background: rgba(18, 38, 86, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(34, 211, 238, 0.1);
+            transition: all 0.3s ease;
+        }
+        .cyber-card:hover {
+            border-color: var(--cyan);
+            background: rgba(18, 38, 86, 0.6);
+         }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border: 2px solid;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Michroma', sans-serif;
+            font-size: 24px;
+            flex-shrink: 0;
+            background: rgba(2, 6, 23, 0.8);
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        .btn-action {
+            background: var(--orange);
+            color: rgb(0, 0, 0);
+            font-family: 'Michroma';
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+        .btn-action:hover { background: var(--cyan); box-shadow: 0 0 25px var(--cyan); transform: scale(1.05); }
+
+        .text-glow { text-shadow: 0 0 15px rgba(249, 115, 22, 0.4); }
+
+        /* Classes para o efeito de escada (staggered) no desktop */
+        @media (min-width: 768px) {
+            .step-1 { margin-left: 0%; }
+            .step-2 { margin-left: 10%; }
+            .step-3 { margin-left: 20%; }
+            .step-4 { margin-left: 30%; }
+            .step-5 { margin-left: 40%; }
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-thumb { background: var(--orange); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Cabeçalho idêntico ao original -->
+    <header class="p-4 md:p-8 max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center">
+            <svg class="w-8 h-8 md:w-10 md:h-10 mr-4 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <path d="M24 4L41.3205 14V34L24 44L6.67949 34V14L24 4Z" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="17" y="17" width="14" height="14" rx="2" fill="#f97316" filter="url(#glow)"/>
+            </svg>
+            <div class="flex flex-col leading-none">
+                <span class="text-lg md:text-xl font-tech tracking-tighter text-white">[ PIRACAIA.SHOP ]</span>
+                <span class="text-[8px] md:text-[10px] font-tech text-orange-500 tracking-[0.1em] md:tracking-[0.3em]">PRESENÇA DIGITAL EM PIRACAIA E REGIÃO</span>
+            </div>
+        </div>
+        <div class="text-[9px] text-cyan-400 font-tech border border-cyan-400/30 px-3 py-1 bg-slate-900/50">
+            NODE_STATUS: [PASSO_A_PASSO]
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto px-2 py-1">
+        <h1 class="text-xl md:text-3xl font-tech text-center mb-8 text-glow">
+            COMO FUNCIONA O <span class="text-orange-500">PROCESSO</span>
+        </h1>
+
+        <div class="space-y-4 md:space-y-4">
+            <!-- Passo 1 -->
+            <div class="step-1 flex flex-col md:flex-row items-center gap-6 group">
+                <div class="cyber-card step-number text-cyan-500 border-cyan-500">1</div>
+                <div class="cyber-card p-4 rounded-lg w-full md:max-w-2xl">
+                    <h3 class="text-cyan-400 mb-2 text-sm md:text-base">ESCOLHA SUA IDENTIDADE DIGITAL</h3> 
+                    <p class="text-xs md:text-sm leading-relaxed uppercase">
+                        ESCOLHA SEU ENDEREÇO NA WEB:<br>
+                        <span class="text-white font-bold">WWW.SEUNEGOCIO.PIRACAIA.SHOP</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="step-2 flex flex-col md:flex-row items-center gap-6 group">
+                <div class="cyber-card step-number text-purple-500 border-purple-500">2</div>
+                <div class="cyber-card p-4 rounded-lg w-full md:max-w-2xl border-purple-500/20">
+                    <h3 class="text-purple-400 mb-2 text-sm md:text-base">VERIFIQUE A DISPONIBILIDADE</h3>
+                    <p class="text-xs md:text-sm leading-relaxed uppercase">
+                        ATRAVÉS DO NOSSO WHATSAPP VERIFIQUE SE O NOME ESCOLHIDO ESTÁ DISPONÍVEL:<br>
+                        <a href="https://wa.me/+5511933924115" class="text-white font-bold hover:text-green-400 transition-colors">(11) 93392-4115</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="step-3 flex flex-col md:flex-row items-center gap-6 group">
+                <div class="step-number text-orange-500 border-orange-500">3</div>
+                <div class="cyber-card p-4 rounded-lg w-full md:max-w-2xl border-orange-500/20">
+                    <h3 class="text-orange-400 mb-2 text-sm md:text-base">ESCOLHA O MODELO</h3>
+                    <p class="text-xs md:text-sm leading-relaxed uppercase">
+                        SELECIONE DENTRO DE MAIS DE 100 MODELOS PRONTOS DISPONÍVEIS E PERSONALIZE COM OS TONS DE CORES DA SUA PREFERÊNCIA.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Passo 4 -->
+            <div class="step-4 flex flex-col md:flex-row items-center gap-6 group">
+                <div class="step-number text-blue-500 border-blue-500">4</div>
+                <div class="cyber-card p-4 rounded-lg w-full md:max-w-2xl border-blue-500/20">
+                    <h3 class="text-blue-400 mb-2 text-sm md:text-base">ENVIE SUAS INFORMAÇÕES</h3>
+                    <p class="text-xs md:text-sm leading-relaxed uppercase">
+                        LOGOTIPO, DESCRIÇÃO DA EMPRESA, PRODUTOS, SERVIÇOS, CONTATOS, REDES SOCIAIS, MARKETPLACES E MUITO MAIS...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Passo 5 -->
+            <div class="step-5 flex flex-col md:flex-row items-center gap-6 group pb-12">
+                <div class="step-number text-green-500 border-green-500">5</div>
+                <div class="cyber-card p-4 rounded-lg w-full md:max-w-2xl border-green-500/20">
+                    <h3 class="text-green-400 mb-2 text-sm md:text-base">DEFINA SUAS TAGS</h3>
+                    <p class="text-xs md:text-sm leading-relaxed uppercase">
+                        DEFINA AS PALAVRAS-CHAVES QUE VOCÊ QUER QUE SEU NEGÓCIO SEJA ENCONTRADO PELAS BUSCAS DO GOOGLE.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 mb-16">
+            <a href="index.html" class="btn-action px-12 py-4 inline-block rounded-sm text-xs">
+                VOLTAR AO INÍCIO
+            </a>
+        </div>
+    </main>
+
+    <!-- Rodapé idêntico ao original -->
+    <footer class="p-6 md:p-8 border-t border-white/5 text-center text-[7px] md:text-[9px] font-tech text-white/60 tracking-[0.1em] md:tracking-[0.4em] leading-loose">
+        [PIRACAIA.SHOP] // POWERED BY WWW.IDENTIDADEWEB3.COM.BR <br class="md:hidden">
+        © 2026 FELIPE CAMPOS // 
+        <a href="mailto:atendimento@automacel.com" class="text-cyan-500 hover:text-orange-500 transition-colors">ATENDIMENTO@AUTOMACEL.COM</a>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let points = [];
+        const numPoints = window.innerWidth < 768 ? 30 : 80;
+        const maxDistance = 150;
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            points = [];
+            for (let i = 0; i < numPoints; i++) {
+                points.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#22d3ee';
+            ctx.strokeStyle = 'rgba(34, 211, 238, 0.1)';
+
+            for (let i = 0; i < points.length; i++) {
+                let p = points[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 1.2, 0, Math.PI * 2);
+                ctx.fill();
+
+                for (let j = i + 1; j < points.length; j++) {
+                    let p2 = points[j];
+                    let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < maxDistance) {
+                        ctx.lineWidth = 0.5 * (1 - dist / maxDistance);
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        draw();
+    </script>
+</body>
+</html>
