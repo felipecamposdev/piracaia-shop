@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PIRACAIA.SHOP | ENTENDA O QUE É UMA ONEPAGE E LANDING PAGES</title>
+    <meta name="description"
+        content="Saiba a diferença entre OnePage e Landing Pages e entenda por que sua empresa precisa de presença digital em Piracaia e região.">
+
+    <!-- Favicon conforme solicitado -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L41.3 14V34L24 44L6.7 34V14L24 4Z' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Crect x='17' y='17' width='14' height='14' rx='2' fill='%23f97316'/%3E%3C/svg%3E">
+
+    <!-- Estilização e Fontes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=JetBrains+Mono:wght@300;500&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --cyan: #22d3ee;
+            --orange: #f97316;
+            --dark: #020617;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--dark);
+            color: #e6edf3;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-tech {
+            font-family: 'Michroma', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Estilo do Fundo Animado */
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        /* Container estilo Markdown adaptado para o tema Dark/Cyber */
+        .markdown-container {
+            background: rgba(18, 38, 86, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(34, 211, 238, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .cyber-card {
+            background: rgba(18, 38, 86, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(34, 211, 238, 0.1);
+            clip-path: polygon(0 0, 95% 0, 100% 12%, 100% 100%, 5% 100%, 0 88%);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-card:hover {
+            border-color: var(--cyan);
+            background: rgba(18, 38, 86, 0.8);
+        }
+
+        .btn-action {
+            background: var(--orange);
+            color: #000;
+            font-family: 'Michroma';
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-action:hover {
+            background: var(--cyan);
+            box-shadow: 0 0 25px var(--cyan);
+            transform: scale(1.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+
+        .cyan-glow {
+            text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(34, 211, 238, 0.2);
+            margin: 2rem 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--orange);
+        }
+
+        @media (max-width: 768px) {
+            .markdown-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <!-- Canvas Background -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Header / Menu -->
+    <header class="p-4 md:p-8 max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center">
+            <svg class="w-8 h-8 md:w-10 md:h-10 mr-4 shrink-0" viewBox="0 0 48 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="2" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+                <path d="M24 4L41.3205 14V34L24 44L6.67949 34V14L24 4Z" stroke="#22d3ee" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="17" y="17" width="14" height="14" rx="2" fill="#f97316" filter="url(#glow)" />
+            </svg>
+            <div class="flex flex-col leading-none">
+                <span class="text-lg md:text-xl font-tech tracking-tighter text-white">[ PIRACAIA.SHOP ]</span>
+                <span
+                    class="text-[8px] md:text-[10px] font-tech text-orange-500 tracking-[0.1em] md:tracking-[0.3em]">PRESENÇA
+                    DIGITAL EM PIRACAIA E REGIÃO</span>
+            </div>
+        </div>
+        <nav class="flex gap-4">
+            <div class="text-[9px] text-cyan-400 font-tech border border-cyan-400/30 px-3 py-1 bg-slate-900/50">
+                STATUS: [ONLINE]
+            </div>
+            <a href="https://wa.me/+5511950745406"
+                class="text-[9px] text-orange-400 font-tech border border-orange-400/30 px-3 py-1 hover:bg-orange-400/20 transition-all">
+                CONTATO_SUPORTE
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-4xl mx-auto py-8 px-4 sm:px-6 w-full">
+
+        <!-- Título Principal com Glow -->
+        <div class="text-center mb-12">
+            <h1 class="text-2xl md:text-4xl leading-tight">
+                POR QUE SUA PRESENÇA DIGITAL <br> <span class="text-orange-500 text-glow">IMPORTA HOJE?</span>
+            </h1>
+        </div>
+
+        <!-- Conteúdo Estilo README -->
+        <div class="markdown-container">
+
+            <!-- OnePage Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl text-cyan-400 mb-4 flex items-center gap-2"><i data-lucide="layers"
+                        class="w-5 h-5"></i> 1. O que é uma "OnePage"?</h2>
+                <p class="mb-4">Imagine um folheto sanfonado ou um cartaz bem comprido. Em um site tradicional, você
+                    clica em botões e "muda de sala" (quem somos, serviços, contato). No OnePage, tudo está em uma única
+                    página.</p>
+
+                <div class="cyber-card mt-6">
+                    <p class="text-cyan-400 text-xs mb-2 font-bold uppercase tracking-widest">// COMO FUNCIONA</p>
+                    <p class="text-sm">O visitante apenas rola a tela para baixo.</p>
+                    <hr class="my-4 opacity-10">
+                    <p class="text-orange-400 text-xs mb-2 font-bold uppercase tracking-widest">// A SENSAÇÃO</p>
+                    <p class="text-sm">É como ler uma história do começo ao fim sem precisar abrir outras portas. É
+                        direto, rápido e ótimo para quem usa o celular.</p>
+                </div>
+
+                <p class="mt-6 italic text-slate-400">
+                    <strong>Para quem serve:</strong> Pequenos negócios, prestadores de serviços ou profissionais
+                    liberais que querem mostrar quem são e o que fazem de forma simples e elegante.
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- Landing Page Section -->
+            <section class="mb-12">
+                <h2 class="text-2xl text-orange-500 mb-4 flex items-center gap-2"><i data-lucide="target"
+                        class="w-5 h-5"></i> 2. O que é uma "Landing Page"?</h2>
+                <p class="mb-4">Pense na Landing Page (ou "Página de Pouso") como um convite focado. Ela não quer contar
+                    a história da sua vida; ela tem um único objetivo: fazer o visitante realizar uma ação específica.
+                </p>
+
+                <div class="cyber-card mt-6 border-orange-500/20">
+                    <p class="text-orange-400 text-xs mb-2 font-bold uppercase tracking-widest">// MECÂNICA</p>
+                    <p class="text-sm">Ela é desenhada para que a pessoa não se distraia. Só existem duas opções: ou a
+                        pessoa aceita a oferta (deixa o WhatsApp, compra um produto, baixa um guia) ou ela fecha a
+                        página.</p>
+                    <hr class="my-4 opacity-10">
+                    <p class="text-cyan-400 text-xs mb-2 font-bold uppercase tracking-widest">// OBJETIVO</p>
+                    <p class="text-sm">É como entrar em uma loja que só vende um produto específico que você estava
+                        procurando muito.</p>
+                </div>
+
+                <p class="mt-6 italic text-slate-400">
+                    <strong>Para quem serve:</strong> Para quem está fazendo um anúncio no Google ou Instagram e quer
+                    vender um produto específico ou conseguir novos contatos de clientes (os famosos "leads").
+                </p>
+            </section>
+
+            <hr>
+
+            <!-- Benefícios Grid -->
+            <section class="mb-12">
+                <h2 class="text-2xl text-white mb-6 text-center">Por que ter uma página na internet?</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="cyber-card">
+                        <h3 class="text-cyan-400 text-xs mb-2 font-tech"># CREDIBILIDADE</h3>
+                        <p class="text-xs leading-relaxed">Hoje em dia, se uma empresa não está no Google, o cliente
+                            desconfia se ela realmente existe ou se é profissional.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-orange-400 text-xs mb-2 font-tech"># VENDEDOR_24H</h3>
+                        <p class="text-xs leading-relaxed">Diferente de uma loja física, seu site explica seus serviços
+                            enquanto você dorme ou está em outro atendimento.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-cyan-400 text-xs mb-2 font-tech"># PONTO_ENCONTRO</h3>
+                        <p class="text-xs leading-relaxed">O lugar oficial para onde você manda quem te encontra no
+                            WhatsApp, Instagram ou por indicação.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-orange-400 text-xs mb-2 font-tech"># CONTROLE_TOTAL</h3>
+                        <p class="text-xs leading-relaxed">No Instagram, as regras mudam sempre. No seu site, as regras
+                            são suas e ninguém "apaga" seu conteúdo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16 bg-slate-900/60 p-8 rounded-xl border border-red-500/30 shadow-2xl shadow-red-500/5">
+                <!-- Título de Alerta com grande destaque -->
+                <div class="text-center mb-8">
+                    <h2
+                        class="text-2xl md:text-4xl font-black text-red-500 uppercase tracking-tighter font-tech mb-4 leading-none">
+                        ALERTA: O que você perde por NÃO estar
+                        online?
+                    </h2>
+                    <p class="text-lg text-slate-400 italic max-w-2xl mx-auto">
+                        "Não ter uma página na internet hoje em dia é como ter uma loja maravilhosa, mas esquecer de
+                        colocar uma placa na frente e manter as luzes apagadas."
+                    </p>
+                </div>
+
+                <!-- Tópicos organizados em Quadros (Cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-slate-800/40 p-6 rounded-lg border-l-4 border-red-600 hover:bg-slate-800/60 transition-all group text-center">
+                        <div class="flex flex-col items-center mb-3">
+                            <span
+                                class="text-red-500 font-bold text-2xl group-hover:scale-110 transition-transform mb-1">[!]</span>
+                            <h3 class="text-xl font-bold text-white uppercase tracking-tight">Invisibilidade</h3>
+                        </div>
+                        <p class="text-slate-300 text-base leading-relaxed">
+                            Se alguém procurar pelo seu serviço no Google, vai encontrar o seu <span
+                                class="text-red-400 font-semibold">concorrente</span>, mas não você.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-slate-800/40 p-6 rounded-lg border-l-4 border-red-600 hover:bg-slate-800/60 transition-all group text-center">
+                        <div class="flex flex-col items-center mb-3">
+                            <span
+                                class="text-red-500 font-bold text-2xl group-hover:scale-110 transition-transform mb-1">[!]</span>
+                            <h3 class="text-xl font-bold text-white uppercase tracking-tight">Atendimento</h3>
+                        </div>
+                        <p class="text-slate-300 text-base leading-relaxed">
+                            Sem um site para tirar dúvidas básicas, você <span class="text-red-400 font-semibold">gasta
+                                horas</span> repetindo as mesmas coisas no WhatsApp.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-slate-800/40 p-6 rounded-lg border-l-4 border-red-600 hover:bg-slate-800/60 transition-all group text-center">
+                        <div class="flex flex-col items-center mb-3">
+                            <span
+                                class="text-red-500 font-bold text-2xl group-hover:scale-110 transition-transform mb-1">[!]</span>
+                            <h3 class="text-xl font-bold text-white uppercase tracking-tight">Confiança</h3>
+                        </div>
+                        <p class="text-slate-300 text-base leading-relaxed">
+                            A ausência de uma página oficial transmite amadorismo. Você <span
+                                class="text-red-400 font-semibold">perde a chance</span> de passar autoridade.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Resumo Final -->
+            <div class="mt-8 text-center p-6 border-t border-b border-orange-500/30">
+                <h3 class="text-orange-500 mb-2">Resumo da ópera</h3>
+                <p class="text-sm leading-relaxed">
+                    "ENQUANTO AS REDES SOCIAIS SÃO COMO UMA <span class="text-cyan-400">'FESTA'</span> ONDE VOCÊ VAI
+                    PARA CONVERSAR, <br>
+                    SUA ONEPAGE É A SUA <span class="text-orange-400">'CASA'</span>. ONDE OS NEGÓCIOS SÃO FECHADOS DE
+                    VERDADE."
+                </p>
+            </div>
+        </div>
+
+        <!-- Botão Final de Chamada -->
+        <div class="text-center pb-20">
+            <a href="https://wa.me/+5511950745406"
+                class="btn-action px-8 md:px-16 py-4 inline-block rounded-sm text-[10px] md:text-xs">
+                QUERO MINHA PRESENÇA DIGITAL AGORA !
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer conforme estilo original -->
+    <footer class="p-6 md:p-8 border-t border-white/5 text-center text-[7px] md:text-[9px] font-tech text-white/60 tracking-[0.1em] md:tracking-[0.4em] leading-loose">
+        [PIRACAIA.SHOP] // POWERED BY IDENTIDADE_WEB3 <br class="md:hidden">
+        © 2026 www.IDENTIDADEWEB3.com.br // (11) 95074-5406
+        <a href="mailto:atendimento@automacel.com" class="text-cyan-500 hover:text-orange-500 transition-colors">atendimento@identidadeweb3.com.br</a>
+    </footer>
+
+    <!-- Script do Canvas Animado -->
+    <script>
+        lucide.createIcons();
+
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let points = [];
+        const numPoints = window.innerWidth < 768 ? 40 : 100;
+        const maxDistance = 150;
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            points = [];
+            for (let i = 0; i < numPoints; i++) {
+                points.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#22d3ee';
+            ctx.strokeStyle = 'rgba(34, 211, 238, 0.15)';
+
+            for (let i = 0; i < points.length; i++) {
+                let p = points[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+                ctx.fill();
+
+                for (let j = i + 1; j < points.length; j++) {
+                    let p2 = points[j];
+                    let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < maxDistance) {
+                        ctx.lineWidth = 1 - dist / maxDistance;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        draw();
+    </script>
+</body>
+
+</html>
