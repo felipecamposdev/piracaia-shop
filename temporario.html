@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PIRACAIA.SHOP | DOMÍNIOS TEMPORÁRIOS PARA EVENTOS</title>
+    <meta name="description"
+        content="Descubra as vantagens de ter um domínio personalizado para seu chá revelação, aniversário ou evento social na era digital.">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4L41.3 14V34L24 44L6.7 34V14L24 4Z' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Crect x='17' y='17' width='14' height='14' rx='2' fill='%23f97316'/%3E%3C/svg%3E">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=JetBrains+Mono:wght@300;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+    <style>
+        :root {
+            --cyan: #22d3ee;
+            --orange: #f97316;
+            --dark: #020617;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--dark);
+            color: #e6edf3;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-tech {
+            font-family: 'Michroma', sans-serif;
+            text-transform: uppercase;
+        }
+
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .markdown-container {
+            background: rgba(18, 38, 86, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(34, 211, 238, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        .cyber-card {
+            background: rgba(18, 38, 86, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(34, 211, 238, 0.1);
+            clip-path: polygon(0 0, 95% 0, 100% 12%, 100% 100%, 5% 100%, 0 88%);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-card:hover {
+            border-color: var(--cyan);
+            background: rgba(18, 38, 86, 0.8);
+        }
+
+        .btn-action {
+            background: var(--orange);
+            color: #000;
+            font-family: 'Michroma';
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-action:hover {
+            background: var(--cyan);
+            box-shadow: 0 0 25px var(--cyan);
+            transform: scale(1.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(34, 211, 238, 0.2);
+            margin: 2rem 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--orange);
+        }
+
+        @media (max-width: 768px) {
+            .markdown-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <canvas id="network-canvas"></canvas>
+
+    <header class="p-4 md:p-8 max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center">
+            <svg class="w-8 h-8 md:w-10 md:h-10 mr-4 shrink-0" viewBox="0 0 48 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="2" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+                <path d="M24 4L41.3205 14V34L24 44L6.67949 34V14L24 4Z" stroke="#22d3ee" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <rect x="17" y="17" width="14" height="14" rx="2" fill="#f97316" filter="url(#glow)" />
+            </svg>
+            <div class="flex flex-col leading-none">
+                <span class="text-lg md:text-xl font-tech tracking-tighter text-white">[ PIRACAIA.SHOP ]</span>
+                <span
+                    class="text-[8px] md:text-[10px] font-tech text-orange-500 tracking-[0.1em] md:tracking-[0.3em]">PRESENÇA
+                    DIGITAL EM PIRACAIA E REGIÃO</span>
+            </div>
+        </div>
+        <nav class="flex gap-4">
+            <div class="text-[9px] text-cyan-400 font-tech border border-cyan-400/30 px-3 py-1 bg-slate-900/50">
+                STATUS: [ONLINE]
+            </div>
+            <a href="https://wa.me/+5511950745406"
+                class="text-[9px] text-orange-400 font-tech border border-orange-400/30 px-3 py-1 hover:bg-orange-400/20 transition-all">
+                CONTATO_SUPORTE
+            </a>
+        </nav>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto py-8 px-4 sm:px-6 w-full">
+
+        <div class="text-center mb-12">
+            <h1 class="text-2xl md:text-4xl leading-tight">
+                IDENTIDADE TEMPORÁRIA PERSONALIZADA <br> <br><span class="text-orange-500 text-glow">A INOVAÇÃO DIGITAL QUE SEU
+                    EVENTO MERECE</span>
+            </h1>
+  
+        </div>
+
+        <div class="markdown-container">
+
+            <section class="mb-12">
+                 <section class="mb-12">
+                <h2 class="text-3xl text-cyan-400 mb-6 flex items-center gap-2"><i data-lucide="sparkles"
+                        class="w-5 h-5"></i> 1. SEU DIFERENCIAL NA ERA DIGITAL</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="cyber-card">
+                        <h3 class="text[18px] text-pink-400 mb-2 font-tech"><strong># CHÁ REVELAÇÃO</strong></h3>
+   
+                        <p class="text[18px] leading-relaxed">Crie enquetes interativas em tempo real. Os convidados votam
+                            no seu site antes da grande revelação, Idel para postar no <span class="text-pink-400"><strong>Instagram</strong></span> <i class="fa-brands fa-instagram text-2xl text-pink-400 group-hover:rotate-12 transition-transform"></i></p>
+                            
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text[18px] text-green-400 mb-2 font-tech"><strong># CHÁ DE BEBÊ</strong></h3>
+                        <p class="text[18px] leading-relaxed">Organização impecável de tamanhos de fraldas e itens para o 
+                            enxoval com links diretos para compra <i class="fa-solid fa-cart-shopping text-2xl text-green-400 group-hover:rotate-12 transition-transform"></i>. (Você coloca o link direto para o produto que deseja).</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-blue-500 text[18px] mb-2 font-tech"><strong># ANIVERSÁRIOS</strong></h3>
+                        
+                        <p class="text[18px] leading-relaxed">Mural de recados digital e galeria oficial para download <i class="fa-solid fa-cloud-arrow-down text-2xl text-blue-600 group-hover:rotate-12"></i> das
+                            fotos e vídeos após a festa.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-amber-400 text[18px] mb-2 font-tech"><strong># CASAMENTOS</strong></h3>
+                        <p class="text[18px] leading-relaxed">História do casal, lista de desejos <i class="fa-solid fa-list-check text-2xl text-amber-400 group-hover:rotate-12"></i> (com link direto para compra),  mapas de localização e detalhes do "Save
+                            the Date" em um só lugar.</p>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <BR>
+
+
+
+
+
+
+                <h2 class="text-3xl text-orange-500 mb-4 flex items-center gap-2"><i data-lucide="globe"
+                        class="w-5 h-5"></i> 2. O que é um IDENTIDADE TemporáriA?</h2>
+                <p class="text-[20px] mb-4">Transformar um evento em uma experiência memorável começa muito antes da
+                    data marcada.
+                    Na era da conectividade,
+                    a primeira impressão não é mais o convite de papel, mas sim o link que você envia aos seus
+                    convidados.Ter um domínio temporário personalizado como <span
+                        class="text-[20px] text-purple-400">www.niveralice.piracaia.shop</span> ou
+                    <span class="text-[20px] text-green-400">www.revelacaoanaepaulo.com.br</span> deixou de ser um <span
+                        class="text-[24px] text-yellow-400">LUXO</span>
+                    dos famosos para se tornar uma ferramenta indispensável de organização e charme para qualquer tipo
+                    de evento social.
+                </p>
+
+                <div class="cyber-card mt-6">
+                    <p class="text-cyan-400 text-xs mb-2 font-bold uppercase tracking-widest">// Por que apostar em um
+                        Domínio Temporário?</p>
+                    <p class="text-sm">Imagine a diferença entre enviar um convite impresso ou uma simples mensagem no
+                        WhatsApp, para enviar ao seu convidade um
+                        QrCode ou o link de um site intuitivo com o nome do seu evento ?</p>
+                    <hr class="my-4 opacity-10">
+                    <p class="text-orange-400 text-xs mb-2 font-bold uppercase tracking-widest">// FACILIDADE DE
+                        MEMORIZAÇÃO</p>
+                    <p class="text-sm">Seus convidados não precisam "caçar" a mensagem no WhatsApp. Basta
+                        digitar o nome do evento no navegador e em alguns casos, até mesmo no Google.</p>
+                    <hr class="my-4 opacity-10">
+                    <p class="text-green-400 text-xs mb-2 font-bold uppercase tracking-widest">// TUDO EM UM SÓ LUGAR
+                    </p>
+                    <p class="text-sm">Localização (Integração com Waze/Maps), sugestões de trajes, contagem regressiva
+                        e lista
+                        de presentes, mural de recados em um só lugar.</p>
+                    <hr class="my-4 opacity-10">
+                    <p class="text-red-400 text-xs mb-2 font-bold uppercase tracking-widest">// PROFISSIONALISMO E
+                        CARINHO</p>
+                    <p class="text-sm">Demonstra que você teve cuidado com cada detalhe, elevando a expectativa dos
+                        convidados.</p>
+                                        <hr class="my-4 opacity-10">
+                    <p class="text-cyan-400 text-xs mb-2 font-bold uppercase tracking-widest">// USO DE QRCODES</p>
+                    <p class="text-sm">Você pode imprimir o sua IDENTIDADE DIGITAL em formato de QR Code em lembranças físicas, 
+                        direcionando todos para o site com um único escaneamento pela tela do celular.</p>
+                         <hr class="my-4 opacity-10">
+                </div>
+            </section>
+
+            <section
+                class="mb-16 bg-slate-900/60 p-8 rounded-xl border border-green-500/100 shadow-2xl shadow-green-500/5">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-slate-800/40 p-6 rounded-lg border-l-4 border-green-600 hover:bg-slate-800/60 transition-all text-center">
+                        <div class="flex flex-col items-center mb-3">
+                            <span class="text-green-500 font-bold text-2xl mb-1">[RSVP]</span>
+                            <h3 class="text-sm font-bold text-white uppercase tracking-tight">Confirmação</h3>
+                        </div>
+                        <p class="text-slate-300 text-xs">Gestão automatizada de presença, gerando relatórios precisos
+                            para o seu buffet.</p>
+                    </div>
+
+                    <div
+                        class="bg-slate-800/40 p-6 rounded-lg border-l-4 border-green-600 hover:bg-slate-800/60 transition-all text-center">
+                        <div class="flex flex-col items-center mb-3">
+                            <span class="text-green-500 font-bold text-2xl mb-1">[LIST]</span>
+                            <h3 class="text-sm font-bold text-white uppercase tracking-tight">Lista de Presentes</h3>
+                        </div>
+                        <p class="text-slate-300 text-xs">Integração direta com enxovais online ou listas de presentes,
+                            evitando duplicidade.</p>
+                    </div>
+
+                    <div
+                        class="bg-slate-800/40 p-6 rounded-lg border-l-4 border-green-600 hover:bg-slate-800/60 transition-all text-center">
+                        <div class="flex flex-col items-center mb-3">
+                            <span class="text-green-500 font-bold text-2xl mb-1">[QR]</span>
+                            <h3 class="text-sm font-bold text-white uppercase tracking-tight">QR Code Ready</h3>
+                        </div>
+                        <p class="text-slate-300 text-xs">Perfeito para imprimir em convites físicos, levando o
+                            convidado direto para o site.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="mb-12">
+                <h2 class="text-2xl text-orange-500 mb-6 flex items-center gap-2"><i data-lucide="sparkles"
+                        class="w-5 h-5"></i> 2. SEU DIFERENCIAL NA ERA DIGITAL</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="cyber-card">
+                        <h3 class="text-cyan-400 text-xs mb-2 font-tech"> <i class="fas fa-arrow-right text-stone-300 group-hover:text-rose-400"></i># CHÁ_REVELAÇÃO</h3>
+                        <p class="text-xs leading-relaxed">Crie enquetes interativas em tempo real. Os convidados votam
+                            no site antes da grande revelação.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-orange-400 text-xs mb-2 font-tech"># CHÁ_DE_BEBÊ</h3>
+                        <p class="text-xs leading-relaxed">Organização impecável de tamanhos de fraldas e itens de
+                            enxoval com links diretos de compra.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-cyan-400 text-xs mb-2 font-tech"># ANIVERSÁRIOS</h3>
+                        <p class="text-xs leading-relaxed">Mural de recados digital e galeria oficial para download das
+                            fotos após a festa.</p>
+                    </div>
+                    <div class="cyber-card">
+                        <h3 class="text-orange-400 text-xs mb-2 font-tech"># CASAMENTOS</h3>
+                        <p class="text-xs leading-relaxed">História do casal, mapas de localização e detalhes do "Save
+                            the Date" em um só lugar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16 bg-slate-900/60 p-8 rounded-xl border border-red-500/30 shadow-2xl shadow-red-500/5">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-black text-red-500 uppercase tracking-tighter font-tech mb-4">
+                        ALERTA: O QUE SEU EVENTO PERDE SEM SITE?
+                    </h2>
+                    <p class="text-base text-slate-400 italic max-w-2xl mx-auto">
+                        "Organizar um evento hoje sem um domínio é como dar uma festa incrível, mas deixar todos os
+                        convidados perdidos na porta, sem saber para onde ir."
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-800/40 p-4 rounded border-l-2 border-red-600">
+                        <h3 class="text-sm font-bold text-white mb-2 uppercase">Ruído de Informação</h3>
+                        <p class="text-slate-400 text-[10px]">Dúvidas repetitivas no seu celular privado sobre
+                            localização e presentes.</p>
+                    </div>
+                    <div class="bg-slate-800/40 p-4 rounded border-l-2 border-red-600">
+                        <h3 class="text-sm font-bold text-white mb-2 uppercase">Amadorismo</h3>
+                        <p class="text-slate-400 text-[10px]">Links feios e longos passam a sensação de falta de
+                            planejamento.</p>
+                    </div>
+                    <div class="bg-slate-800/40 p-4 rounded border-l-2 border-red-600">
+                        <h3 class="text-sm font-bold text-white mb-2 uppercase">Desorganização</h3>
+                        <p class="text-slate-400 text-[10px]">Dificuldade em contabilizar convidados e gerenciar a lista
+                            de presentes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="mt-8 text-center p-6 border-t border-b border-orange-500/30">
+                <h3 class="text-xl text-green-500 mb-2">MODERNIDADE E EXCLUSIVIDADE</h3>
+                <p class="text-lg leading-relaxed uppercase font-tech text-white">
+                    TRANSFORME SEU EVENTO EM UMA EXPERIÊNCIA DIGITAL COMPLETA.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center pb-20">
+            <a href="https://wa.me/+5511950745406?text=Olá,%20quero%20um%20DOMÍNIO%20PERSONALIZADO%20para%20meu%20evento."
+                target="_blank" class="btn-action px-8 md:px-16 py-4 inline-block rounded-sm text-[10px] md:text-xs">
+                REGISTRAR DOMÍNIO PARA MEU EVENTO AGORA !
+            </a>
+        </div>
+
+    </main>
+
+    <footer
+        class="p-6 md:p-8 border-t border-white/5 text-center text-[7px] md:text-[9px] font-tech text-white/60 tracking-[0.1em] md:tracking-[0.4em] leading-loose">
+        [PIRACAIA.SHOP] // POWERED BY IDENTIDADE_WEB3 <br class="md:hidden">
+        © 2026 www.IDENTIDADEWEB3.com.br // (11) 95074-5406 <br>
+        <a href="mailto:atendimento@identidadeweb3.com.br"
+            class="text-cyan-500 hover:text-orange-500 transition-colors">atendimento@identidadeweb3.com.br</a>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let points = [];
+        const numPoints = window.innerWidth < 768 ? 40 : 100;
+        const maxDistance = 150;
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            points = [];
+            for (let i = 0; i < numPoints; i++) {
+                points.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#22d3ee';
+            ctx.strokeStyle = 'rgba(34, 211, 238, 0.15)';
+
+            for (let i = 0; i < points.length; i++) {
+                let p = points[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+                ctx.fill();
+
+                for (let j = i + 1; j < points.length; j++) {
+                    let p2 = points[j];
+                    let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < maxDistance) {
+                        ctx.lineWidth = 1 - dist / maxDistance;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        draw();
+    </script>
+</body>
+
+</html>
