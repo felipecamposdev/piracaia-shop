@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Manutenção - COFAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Cinza claro */
+        }
+        .header-gradient {
+            background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%); /* Azul Manutenção */
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Cabeçalho Principal -->
+    <header class="header-gradient text-white py-6 px-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded shadow-inner">
+                    <span class="text-blue-900 font-bold text-xl tracking-tighter">COFAT</span>
+                </div>
+                <h1 class="text-lg md:text-xl font-bold uppercase tracking-wide">Dashboard de Performance Janeiro/2026</h1>
+            </div>
+            <div class="text-sm font-medium bg-blue-800/50 px-4 py-1 rounded-full border border-blue-400/30">
+                Status: Sistema Online
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        
+        <div class="mb-8 text-center md:text-left">
+            <h2 class="text-2xl font-bold text-slate-700">Relatórios de Hotlines</h2>
+            <p class="text-slate-500">Monitoramento de P_HOLDERS x T_TOTAL por unidade de serviço.</p>
+        </div>
+
+        <!-- Seção das 8 Fotos -->
+        <section class="flex flex-col gap-10">
+            
+            <!-- Início do Bloco Repetível (Total 8) -->
+            <!-- Item 1 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 01
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <!-- Substituir '08.jpg' pelo caminho real da sua foto -->
+                    <img src="01.jpg" alt="Gráfico de Manutenção Setor 01" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+01+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_A1</span>
+                </div>
+            </article>
+
+            <!-- Item 2 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 02
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="02.jpg" alt="Gráfico de Manutenção Setor 02" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+02+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_A2</span>
+                </div>
+            </article>
+
+            <!-- Item 3 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 03
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="03.jpg" alt="Gráfico de Manutenção Setor 03" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+03+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_B1</span>
+                </div>
+            </article>
+
+            <!-- Item 4 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 04
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="04.jpg" alt="Gráfico de Manutenção Setor 04" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+04+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_B2</span>
+                </div>
+            </article>
+
+            <!-- Item 5 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 05
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="05.jpg" alt="Gráfico de Manutenção Setor 05" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+05+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_C1</span>
+                </div>
+            </article>
+
+            <!-- Item 6 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 06
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="06.jpg" alt="Gráfico de Manutenção Setor 06" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+06+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_C2</span>
+                </div>
+            </article>
+
+            <!-- Item 7 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 07
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="07.jpg" alt="Gráfico de Manutenção Setor 07" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+07+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_D1</span>
+                </div>
+            </article>
+
+            <!-- Item 8 -->
+            <article class="bg-white rounded-xl overflow-hidden card-shadow border border-slate-200">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-100">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                        <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                        RELATÓRIO DE DESEMPENHO - SETOR 08
+                    </h3>
+                </div>
+                <div class="p-2 md:p-4">
+                    <img src="08.jpg" alt="Gráfico de Manutenção Setor 08" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/1200x600/e2e8f0/1e3a8a?text=Foto+08+-+Gráfico+COFAT'">
+                </div>
+                <div class="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-xs md:text-sm text-slate-600 italic">
+                    <span>* NÚMERO TOTAL DE HOT LINES POR HOLDER DE TESTE ELÉTRICO x TEMPO DE TOTAL</span>
+                    <span class="font-bold text-blue-800">UNIDADE_D2</span>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="bg-slate-800 text-slate-400 py-8 mt-12 px-4 border-t border-slate-700">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm">
+                © 2026 COFAT S.A. - Sistema de Monitoramento Industrial
+            </div>
+            <div class="flex gap-6 text-xs uppercase tracking-widest font-semibold">
+                <a href="#" class="hover:text-blue-400 transition">Suporte</a>
+                <a href="#" class="hover:text-blue-400 transition">Termos</a>
+                <a href="#" class="hover:text-blue-400 transition">Sair</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
