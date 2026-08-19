@@ -11,39 +11,16 @@
   <div class="bg-white p-6 rounded-xl shadow-md mt-6">
     <h2 class="text-xl font-bold text-gray-800 mb-4">🛠️ Abertura de O.S.</h2>
     
-    <form id="osForm" class="space-y-4">
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Equipamento</label>
-        <select id="maquina" class="w-full mt-1 p-2 border rounded-lg bg-gray-50">
-          <option>Torno CNC 01</option>
-          <option>Injetora 04</option>
-          <option>Esteira de Embalagem</option>
-        </select>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Tipo de Problema</label>
-        <select id="tipo" class="w-full mt-1 p-2 border rounded-lg bg-gray-50">
-          <option>Falha Elétrica</option>
-          <option>Problema Mecânico</option>
-          <option>Outros</option>
-        </select>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Descrição</label>
-        <textarea id="descricao" required class="w-full mt-1 p-2 border rounded-lg bg-gray-50" rows="3"></textarea>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-700">Foto da Falha</label>
-        <input type="file" id="fotoInput" accept="image/*" capture="environment" class="w-full mt-1 text-sm text-gray-500">
-      </div>
-
-      <button type="submit" id="btnEnviar" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">
-        Enviar Chamado
-      </button>
-    </form>
+<form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST" enctype="multipart/form-data" class="space-y-4">
+  <!-- Seus campos de maquina, tipo e descricao -->
+  <input type="text" name="maquina" placeholder="Equipamento" required>
+  <textarea name="descricao" placeholder="Descrição" required></textarea>
+  
+  <!-- O campo de foto anexada funciona nativamente no plano gratuito -->
+  <input type="file" name="attachment" accept="image/*" capture="environment">
+  
+  <button type="submit">Enviar Chamado</button>
+</form>
     
     <div id="statusMsg" class="mt-4 text-center text-sm font-medium hidden"></div>
   </div>
