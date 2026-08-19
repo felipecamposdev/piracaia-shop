@@ -49,61 +49,62 @@
   </div>
 
   <script>
-    const URL_DO_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbwIuX9H3W2x8bCwn-RBq2pHoryIAQlwD5jHjFfivUUwtjlUCfYGjYm_1CnZXpjDaL14/exec;
+  // Substitua pela URL exata que você copiou na "Nova Versão"
+  const URL_DO_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbwIuX9H3W2x8bCwn-RBq2pHoryIAQlwD5jHjFfivUUwtjlUCfYGjYm_1CnZXpjDaL14/exec";
 
-    document.getElementById('osForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const btn = document.getElementById('btnEnviar');
-      const status = document.getElementById('statusMsg');
-      
-      btn.disabled = true;
-      btn.innerText = "Enviando...";
-      status.classList.remove('hidden');
-      status.innerText = "Processando envio e foto...";
-      status.className = "mt-4 text-center text-sm text-blue-600 font-medium";
+  document.getElementById('osForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const btn = document.getElementById('btnEnviar');
+    const status = document.getElementById('statusMsg');
+    
+    btn.disabled = true;
+    btn.innerText = "Enviando...";
+    status.classList.remove('hidden');
+    status.innerText = "Processando envio e foto...";
+    status.className = "mt-4 text-center text-sm text-blue-600 font-medium";
 
-      const fileInput = document.getElementById('fotoInput');
-      let fotoBase64 = "";
-      let nomeFoto = "";
+    const fileInput = document.getElementById('fotoInput');
+    let fotoBase64 = "";
+    let nomeFoto = "";
 
-      if (fileInput.files.length > 0) {
-        const file = fileInput.files[0];
-        nomeFoto = file.name;
-        fotoBase64 = await new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result);
-          reader.readAsDataURL(file);
-        });
-      }
+    if (fileInput.files.length > 0) {
+      const file = fileInput.files[0];
+      nomeFoto = file.name;
+      fotoBase64 = await new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(file);
+      });
+    }
 
-      const payload = {
-        maquina: document.getElementById('maquina').value,
-        tipo: document.getElementById('tipo').value,
-        descricao: document.getElementById('descricao').value,
-        fotoBase64: fotoBase64,
-        nomeFoto: nomeFoto
-      };
+    const payload = {
+      maquina: document.getElementById('maquina').value,
+      tipo: document.getElementById('tipo').value,
+      descricao: document.getElementById('descricao').value,
+      fotoBase64: fotoBase64,
+      nomeFoto: nomeFoto
+    };
 
-      try {
-        await fetch(URL_DO_GOOGLE_SCRIPT, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
+    try {
+      // Usamos text/plain para evitar que o Google bloqueie a requisição do navegador
+      await fetch(URL_DO_GOOGLE_SCRIPT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
 
-        status.innerText = "✅ Ordem de Serviço enviada com sucesso!";
-        status.className = "mt-4 text-center text-sm text-green-600 font-medium";
-        document.getElementById('osForm').reset();
-      } catch (err) {
-        status.innerText = "❌ Erro ao enviar. Tente novamente.";
-        status.className = "mt-4 text-center text-sm text-red-600 font-medium";
-      } finally {
-        btn.disabled = false;
-        btn.innerText = "Enviar Chamado";
-      }
-    });
-  </script>
+      status.innerText = "✅ Ordem de Serviço enviada com sucesso!";
+      status.className = "mt-4 text-center text-sm text-green-600 font-medium";
+      document.getElementById('osForm').reset();
+    } catch (err) {
+      status.innerText = "❌ Erro ao enviar. Tente novamente.";
+      status.className = "mt-4 text-center text-sm text-red-600 font-medium";
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Enviar Chamado";
+    }
+  });
+</script>
 </body>
 </html>
